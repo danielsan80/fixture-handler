@@ -1,0 +1,1 @@
+FROM matiux/nginx:symfony-2.0.0
