@@ -1,0 +1,27 @@
+{
+    "name": "dan/fixture-handler",
+    "license": "proprietary",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=7.0"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": null
+    },
+    "require-dev": {
+        "symfony/phpunit-bridge": "*"
+    }
+}
