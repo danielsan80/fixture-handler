@@ -5,7 +5,7 @@ volumes:
 
 services:
   nginx:
-    build: ./docker/nginx
+    build: docker/nginx
     ports:
       - '8080:80'
     depends_on:
@@ -14,10 +14,10 @@ services:
       - ./docker/var/logs/nginx/:/var/log/nginx
       - ./:/var/www/app
   php:
-    build: ./docker/php
+    build: docker/php
     tty: true # -t option in docker
     stdin_open: true # -i option in docker
-    hostname: fixture-handler
+    hostname: ${HOSTNAME}
     volumes:
       - ./:/var/www/app
     environment:

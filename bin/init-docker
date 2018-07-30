@@ -1,0 +1,26 @@
+if [ -d .tmp/docker-repo ]; then
+    rm -Rf .tmp/docker-repo
+fi
+
+git clone git@bitbucket.org:danielsan-team/docker-php7.git .tmp/docker-repo
+
+if [ ! -d docker ]; then
+    cp -R .tmp/docker-repo/files/* ./
+    cp .tmp/docker-repo/files/.* ./ 2>/dev/null
+    if [ ! -f .env ]; then
+        cp .env.dist.docker .env
+    fi
+else
+    echo "";
+    echo "*** Compare .tmp/docker-repo/files/docker with docker ***"
+    echo "";
+fi
+
+
+
+# rsync -PavzcE --delete --exclude-from=.tmp/docker-repo/rsync_exclude  .tmp/docker-repo/files/docker/ docker/
+#rm -Rf .tmp/docker-repo/files/docker
+#cp .tmp/docker-repo/files/* ./
+#cp .tmp/docker-repo/files/.* ./
+#rm -Rf .tmp/docker-repo
+

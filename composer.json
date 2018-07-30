@@ -1,6 +1,6 @@
 {
     "name": "dan/fixture-handler",
-    "license": "proprietary",
+    "license": "MIT",
     "type": "library",
     "autoload": {
         "psr-4": {
@@ -13,15 +13,15 @@
         }
     },
     "require": {
-        "php": ">=7.0"
+        "php": ">=7.1"
+    },
+    "require-dev": {
+        "symfony/phpunit-bridge": "*"
     },
     "config": {
         "sort-packages": true
     },
     "extra": {
         "branch-alias": null
-    },
-    "require-dev": {
-        "symfony/phpunit-bridge": "*"
     }
 }

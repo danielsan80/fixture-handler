@@ -5,11 +5,10 @@ if [ ! -e .env ]; then
 fi
 
 if [ "$1" == "up" ]; then
-    if [ ! -d docker/var/.ssh/id_rsa ]; then
-        cp ~/.ssh/id_rsa docker/php/var/.ssh/
-        cp ~/.ssh/id_rsa.pub docker/php/var/.ssh/
-    fi
-    docker-compose "$@"
+     if [ ! -f docker/php/var/.ssh/id_rsa ]; then
+         cp ~/.ssh/* docker/php/var/.ssh/
+     fi
+     docker-compose "$@"
 elif [ "$1" == "enter-root" ]; then
     docker-compose exec -u root php bash
 elif [ "$1" == "enter" ]; then
