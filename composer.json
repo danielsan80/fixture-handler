@@ -22,6 +22,8 @@
         "sort-packages": true
     },
     "extra": {
-        "branch-alias": null
+        "branch-alias": {
+            "dev-master": "0.0.x-dev"
+        }
     }
 }
