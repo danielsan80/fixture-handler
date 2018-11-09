@@ -162,6 +162,7 @@ class FixtureHandlerTest extends TestCase
         }, ['b']));
 
         $fh->addFixture(new FunctionFixture(function (FunctionFixture $f) {
+            $f->setRef('e', 'ciao');
             $f->setRef('a', $f->getRefOrFail('d'));
         }));
 

@@ -21,7 +21,7 @@ class NotLoadedFixtureReports extends \ArrayObject
                 " - %s:\n%sdependsOn: \n%s",
                 get_class($fixture),
                 $this->indent(5),
-                $this->indent(7).implode("\n".$this->indent(7), $this->formatDependsOn($fixture->dependsOn()))
+                $this->indent(5).implode("\n".$this->indent(5), $this->formatDependsOn($fixture->dependsOn()))
             );
         }
         return implode("\n\n", $stack);
@@ -37,9 +37,9 @@ class NotLoadedFixtureReports extends \ArrayObject
         $items = [];
         foreach ($dependsOn as $value) {
             if (in_array($value, $this->availableRefKeys)) {
-                $available = '✔ ';
+                $available = '🗸';
             } else {
-                $available = '  ';
+                $available = ' ';
             }
             $items[] = $available . " '$value'";;
         }
