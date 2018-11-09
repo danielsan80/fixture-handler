@@ -18,10 +18,10 @@ class NotLoadedFixtureReports extends \ArrayObject
 
         foreach ($this as $i => $fixture) {
             $stack[] = sprintf(
-                " - %s:\n%sdependsOn: %s",
-                $this->indent(5),
+                " - %s:\n%sdependsOn: \n%s",
                 get_class($fixture),
-                "\n".$this->indent(7).implode("\n".$this->indent(7), $this->formatDependsOn($fixture->dependsOn()))
+                $this->indent(5),
+                $this->indent(7).implode("\n".$this->indent(7), $this->formatDependsOn($fixture->dependsOn()))
             );
         }
         return implode("\n\n", $stack);
@@ -36,11 +36,12 @@ class NotLoadedFixtureReports extends \ArrayObject
     {
         $items = [];
         foreach ($dependsOn as $value) {
-            $value = "'$value'";
-            if (!in_array($value, $this->availableRefKeys)) {
-                $value .= '(m)';
+            if (in_array($value, $this->availableRefKeys)) {
+                $available = '[✔]';
+            } else {
+                $available = '[ ]';
             }
-            $items[] = $value;
+            $items[] = $available . " '$value'";;
         }
 
         return $items;
