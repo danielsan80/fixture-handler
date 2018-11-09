@@ -37,9 +37,9 @@ class NotLoadedFixtureReports extends \ArrayObject
         $items = [];
         foreach ($dependsOn as $value) {
             if (in_array($value, $this->availableRefKeys)) {
-                $available = '[✔]';
+                $available = '✔ ';
             } else {
-                $available = '[ ]';
+                $available = '  ';
             }
             $items[] = $available . " '$value'";;
         }
