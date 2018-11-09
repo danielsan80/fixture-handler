@@ -30,10 +30,11 @@ class NotLoadedFixtureReports extends \ArrayObject
     {
         $items = [];
         foreach ($dependsOn as $value) {
-            if (in_array($value, $this->availableRefKeys)) {
+            $value = "'$value'";
+            if (!in_array($value, $this->availableRefKeys)) {
                 $value .= '(m)';
             }
-            $items[] = "'$value'";
+            $items[] = $value;
         }
 
         return implode(', ', $items);
