@@ -20,13 +20,13 @@ class NotLoadedFixtureReports extends \ArrayObject
             $stack[] = sprintf(
                 " - %s:\n    dependsOn: [%s]",
                 get_class($fixture),
-                $this->dependsOnAsString($fixture->dependsOn())
+                "\n      ".implode("\n      ", $this->formatDependsOn($fixture->dependsOn()))
             );
         }
         return implode("\n\n", $stack);
     }
 
-    protected function dependsOnAsString(array $dependsOn)
+    protected function formatDependsOn(array $dependsOn)
     {
         $items = [];
         foreach ($dependsOn as $value) {
@@ -37,7 +37,7 @@ class NotLoadedFixtureReports extends \ArrayObject
             $items[] = $value;
         }
 
-        return implode(', ', $items);
+        return $items;
     }
 
 }
