@@ -18,12 +18,18 @@ class NotLoadedFixtureReports extends \ArrayObject
 
         foreach ($this as $i => $fixture) {
             $stack[] = sprintf(
-                " - %s:\n    dependsOn: [%s]",
+                " - %s:\n%sdependsOn: %s",
+                $this->indent(5),
                 get_class($fixture),
-                "\n      ".implode("\n      ", $this->formatDependsOn($fixture->dependsOn()))
+                "\n".$this->indent(7).implode("\n".$this->indent(7), $this->formatDependsOn($fixture->dependsOn()))
             );
         }
         return implode("\n\n", $stack);
+    }
+
+    protected function indent($length)
+    {
+        return str_pad('',$length,' ');
     }
 
     protected function formatDependsOn(array $dependsOn)
