@@ -1,4 +1,4 @@
-FROM matiux/php:7.1-fpm-2.0.0
+FROM matiux/php:7.1-fpm-2.2.0
 
 RUN echo 'alias test="vendor/bin/simple-phpunit --exclude-group=ignored"' >> /home/utente/.bashrc && \
     echo 'alias test-ignored="vendor/bin/simple-phpunit --group=ignored"' >> /home/utente/.bashrc && \
