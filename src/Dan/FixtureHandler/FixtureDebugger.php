@@ -81,15 +81,15 @@ class FixtureDebugger
         }
     }
 
-    public function declareLoadFixtureFailed(\Throwable $e, array $notLoadedFixtures)
+    public function declareLoadFixtureFailed(\Throwable $e, array $notLoadedFixtures, array $availableRefs)
     {
-        $notLoadedFixtures = new NotLoadedFixtureReports(array_values($notLoadedFixtures));
+        $notLoadedFixtures = new NotLoadedFixtureReports(array_values($notLoadedFixtures), array_keys($availableRefs));
         throw new LoadFixtureFailedException($e, $this->loadedFixtures(), $notLoadedFixtures);
     }
 
-    public function declareUnresolvable(array $notLoadedFixtures)
+    public function declareUnresolvable(array $notLoadedFixtures, array $availableRefs)
     {
-        $notLoadedFixtures = new NotLoadedFixtureReports(array_values($notLoadedFixtures));
+        $notLoadedFixtures = new NotLoadedFixtureReports(array_values($notLoadedFixtures), array_keys($availableRefs));
         throw new UnresolvableDependenciesException($this->loadedFixtures(), $notLoadedFixtures);
     }
 

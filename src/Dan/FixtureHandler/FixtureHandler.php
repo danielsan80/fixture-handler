@@ -105,7 +105,7 @@ class FixtureHandler
             }
             $newFixturesStatus = $this->getFixturesStatus();
             if ($newFixturesStatus == $fixturesStatus) {
-                $this->fixtureDebugger->declareUnresolvable($this->fixtures);
+                $this->fixtureDebugger->declareUnresolvable($this->fixtures, $this->refs);
             }
             $fixturesStatus = $newFixturesStatus;
         }
@@ -135,7 +135,7 @@ class FixtureHandler
         try {
             $fixture->load();
         } catch (\Throwable $e) {
-            $this->fixtureDebugger->declareLoadFixtureFailed($e, $this->fixtures);
+            $this->fixtureDebugger->declareLoadFixtureFailed($e, $this->fixtures, $this->refs);
         }
         $this->fixtureDebugger->checkDetectedDependencies($hash, $fixture);
         $this->fixtureDebugger->resetCurrentFixture();
