@@ -17,5 +17,12 @@ RUN apt-get update && apt-get install -y git rsync curl && \
 
 RUN echo "ServerAliveInterval 120" >> /etc/ssh/ssh_config
 
+RUN sed -i "s/\/usr\/bin\/supervisord//" /usr/local/bin/start-container && \
+    echo "" >> /usr/local/bin/start-container && \
+    echo "sed -i \"s/{email}/\$GIT_USER_EMAIL/\" /home/utente/.gitconfig" >> /usr/local/bin/start-container && \
+    echo "sed -i \"s/{name}/\$GIT_USER_NAME/\" /home/utente/.gitconfig" >> /usr/local/bin/start-container && \
+    echo "/usr/bin/supervisord" >> /usr/local/bin/start-container
+
+COPY --chown=utente:utente .gitconfig /home/utente/
 COPY --chown=utente:utente var/.ssh/* /home/utente/.ssh/
 RUN  chmod 600 /home/utente/.ssh/id_rsa
