@@ -3,10 +3,12 @@ require __DIR__.'/../vendor/autoload.php';
 
 
 $client = new \BackPort\Client();
-$client->execute(
-    __DIR__.'/..',
-    [
-    __DIR__.'/../src'
-]);
+
+$client
+    ->setProjectDir(__DIR__.'/..')
+    ->setDirsToPort([
+        __DIR__.'/../src'
+    ])
+;
 
 echo "DONE\n";

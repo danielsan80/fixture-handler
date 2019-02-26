@@ -13,14 +13,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:danielsan-team/backport.git",
-                "reference": "350dfb74eba97c293b22e8c468457a533f49b0a7"
+                "reference": "b2cb68bff19e087873c1e24530ad629c8686c450"
             },
             "require": {
+                "nikic/php-parser": "^4.2",
                 "php": ">=7.1",
                 "symfony/finder": "*"
             },
             "require-dev": {
-                "nikic/php-parser": "^4.2",
                 "symfony/phpunit-bridge": "*"
             },
             "type": "library",
@@ -43,7 +43,58 @@
                 "proprietary"
             ],
             "description": "A simple php backport module",
-            "time": "2019-02-26T20:38:36+00:00"
+            "time": "2019-02-26T21:14:52+00:00"
+        },
+        {
+            "name": "nikic/php-parser",
+            "version": "v4.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nikic/PHP-Parser.git",
+                "reference": "5221f49a608808c1e4d436df32884cbc1b821ac0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/5221f49a608808c1e4d436df32884cbc1b821ac0",
+                "reference": "5221f49a608808c1e4d436df32884cbc1b821ac0",
+                "shasum": ""
+            },
+            "require": {
+                "ext-tokenizer": "*",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.5 || ^7.0"
+            },
+            "bin": [
+                "bin/php-parse"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PhpParser\\": "lib/PhpParser"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Nikita Popov"
+                }
+            ],
+            "description": "A PHP parser written in PHP",
+            "keywords": [
+                "parser",
+                "php"
+            ],
+            "time": "2019-02-16T20:54:15+00:00"
         },
         {
             "name": "symfony/finder",
