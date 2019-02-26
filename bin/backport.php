@@ -9,6 +9,7 @@ $client
     ->setDirsToPort([
         __DIR__.'/../src'
     ])
+    ->execute()
 ;
 
 echo "DONE\n";
