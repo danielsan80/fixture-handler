@@ -1,0 +1,8 @@
+/var/**
+!/var/**/
+
+/php/var/**
+!/php/var/**/
+!/php/var/.ssh/README.md
+
+!.gitkeep

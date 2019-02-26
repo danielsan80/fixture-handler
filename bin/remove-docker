@@ -1,8 +1,0 @@
-if [ "$1" == "--force" ]; then
-    rm -Rf docker
-    rm -Rf dc
-    rm -Rf docker-compose.yml
-    rm -Rf .env.dist.docker
-else
-    echo "Please force this command with --force"
-fi

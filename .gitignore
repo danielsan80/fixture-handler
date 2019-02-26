@@ -7,17 +7,13 @@
 /vendor/
 /web/bundles/
 
-/docker/var/**
-!/docker/var/**/
-
-/docker/php/var/**
-!/docker/php/var/**/
-
 /.idea/
 /nbproject/
 /.env
 
 /.tmp
+
+/docker-compose.override.yml
 
 
 !.gitkeep

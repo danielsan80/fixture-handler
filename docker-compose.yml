@@ -1,18 +1,18 @@
 version: '3'
 
-volumes:
-  db_volume: {}
+#volumes:
+#  db_volume: {}
 
 services:
-  nginx:
-    build: docker/nginx
-    ports:
-      - '8080:80'
-    depends_on:
-      - php
-    volumes:
-      - ./docker/var/logs/nginx/:/var/log/nginx
-      - ./:/var/www/app
+#  nginx:
+#    build: docker/nginx
+#    ports:
+#      - '8080:80'
+#    depends_on:
+#      - php
+#    volumes:
+#      - ./docker/var/logs/nginx/:/var/log/nginx
+#      - ./:/var/www/app
   php:
     build: docker/php
     tty: true # -t option in docker
@@ -22,21 +22,23 @@ services:
       - ./:/var/www/app
     environment:
       - APP_ENV=${APP_ENV}
-  db:
-    image: mysql:5.7
-    restart: always
-    command: mysqld --sql_mode=""
-    volumes:
-      - db_volume:/var/lib/mysql
-    environment:
-      - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
-    ports:
-      - '3307:3306'
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    ports:
-      - "8081:80"
-    depends_on:
-      - db
-    environment:
-      - PMA_HOST=db
+      - GIT_USER_EMAIL=${GIT_USER_EMAIL}
+      - GIT_USER_NAME=${GIT_USER_NAME}
+#  db:
+#    image: mysql:5.7
+#    restart: always
+#    command: mysqld --sql_mode=""
+#    volumes:
+#      - db_volume:/var/lib/mysql
+#    environment:
+#      - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
+#    ports:
+#      - '3307:3306'
+#  phpmyadmin:
+#    image: phpmyadmin/phpmyadmin
+#    ports:
+#      - "8081:80"
+#    depends_on:
+#      - db
+#    environment:
+#      - PMA_HOST=db
