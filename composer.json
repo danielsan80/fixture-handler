@@ -18,20 +18,15 @@
     },
     "require-dev": {
         "symfony/phpunit-bridge": "*",
-        "dan/backport": "0.0.*@dev"
+        "dansan/php-backport": "0.0.*@dev"
     },
     "config": {
         "sort-packages": true
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "0.0.x-dev"
+            "dev-master": "0.1.x-dev",
+            "dev-0.0": "0.0.x-dev"
         }
-    },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "git@bitbucket.org:danielsan-team/backport.git"
-        }
-    ]
+    }
 }

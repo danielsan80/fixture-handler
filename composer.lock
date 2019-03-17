@@ -4,16 +4,22 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "72d100d698067506a94bac51486f5961",
+    "content-hash": "a1282e9078a97c9fb1c3d520d63695ed",
     "packages": [],
     "packages-dev": [
         {
-            "name": "dan/backport",
+            "name": "dansan/php-backport",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "git@bitbucket.org:danielsan-team/backport.git",
-                "reference": "b2cb68bff19e087873c1e24530ad629c8686c450"
+                "url": "https://github.com/danielsan80/php-backport.git",
+                "reference": "f02030f4457f1f2adb8138ec856124e9a52c5e07"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/danielsan80/php-backport/zipball/f02030f4457f1f2adb8138ec856124e9a52c5e07",
+                "reference": "f02030f4457f1f2adb8138ec856124e9a52c5e07",
+                "shasum": ""
             },
             "require": {
                 "nikic/php-parser": "^4.2",
@@ -34,16 +40,12 @@
                     "BackPort\\": "src/BackPort/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Tests\\": "tests/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "proprietary"
+                "MIT"
             ],
             "description": "A simple php backport module",
-            "time": "2019-02-26T21:14:52+00:00"
+            "time": "2019-03-07T11:26:36+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -98,16 +100,16 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v4.2.3",
+            "version": "v4.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "ef71816cbb264988bb57fe6a73f610888b9aa70c"
+                "reference": "267b7002c1b70ea80db0833c3afe05f0fbde580a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/ef71816cbb264988bb57fe6a73f610888b9aa70c",
-                "reference": "ef71816cbb264988bb57fe6a73f610888b9aa70c",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/267b7002c1b70ea80db0833c3afe05f0fbde580a",
+                "reference": "267b7002c1b70ea80db0833c3afe05f0fbde580a",
                 "shasum": ""
             },
             "require": {
@@ -143,20 +145,20 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2019-01-16T20:35:37+00:00"
+            "time": "2019-02-23T15:42:05+00:00"
         },
         {
             "name": "symfony/phpunit-bridge",
-            "version": "v4.2.3",
+            "version": "v4.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
-                "reference": "4ea7d80a7512ddc41d5af598978edcd395140edc"
+                "reference": "2cc651a38fcb831a405c14fcb76fcb00320e7ee8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/4ea7d80a7512ddc41d5af598978edcd395140edc",
-                "reference": "4ea7d80a7512ddc41d5af598978edcd395140edc",
+                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/2cc651a38fcb831a405c14fcb76fcb00320e7ee8",
+                "reference": "2cc651a38fcb831a405c14fcb76fcb00320e7ee8",
                 "shasum": ""
             },
             "require": {
@@ -166,7 +168,6 @@
                 "phpunit/phpunit": "<4.8.35|<5.4.3,>=5.0"
             },
             "suggest": {
-                "ext-zip": "Zip support is required when using bin/simple-phpunit",
                 "symfony/debug": "For tracking deprecated interfaces usages at runtime with DebugClassLoader"
             },
             "bin": [
@@ -209,13 +210,13 @@
             ],
             "description": "Symfony PHPUnit Bridge",
             "homepage": "https://symfony.com",
-            "time": "2019-01-24T21:39:51+00:00"
+            "time": "2019-02-18T06:49:49+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "dan/backport": 20
+        "dansan/php-backport": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
