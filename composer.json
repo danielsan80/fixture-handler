@@ -1,5 +1,5 @@
 {
-    "name": "dan/fixture-handler",
+    "name": "dansan/fixture-handler",
     "description": "A module to handle fixtures in tests",
     "license": "MIT",
     "type": "library",
