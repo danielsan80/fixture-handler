@@ -2,7 +2,7 @@
 
 
 
-You can you FixtureHandler in your php test to compact your setup.
+You can use FixtureHandler in your php test to compact your setup.
 
 It is inspired by Doctrine Fixtures but FixtureHandler is not related only to the model or Doctrine entities.
 
