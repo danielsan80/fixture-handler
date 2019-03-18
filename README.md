@@ -241,7 +241,29 @@ $entityManager->flush();
 That's all!
 
 
-### Credits
+
+## Development
+
+Clone the project:
+
+```
+git clone <url> <project_dir>
+cd <project_dir>
+```
+
+Run `cp .env.dist .env` and edit the `.env` file properly.
+
+> The `dc` script will copy your ssh keys from your `~/.ssh` dir into the `php` container.
+
+Start te project and run the tests:
+
+```
+./dc up -d
+./dc enter
+test
+```
+
+## Credits
 
 Thanks to [Matiux](https://github.com/matiux) for the Docker images used in the project
 
