@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a1282e9078a97c9fb1c3d520d63695ed",
+    "content-hash": "d3c3c9da96825e01cf88852b5313f148",
     "packages": [],
     "packages-dev": [
         {
@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/danielsan80/php-backport.git",
-                "reference": "f02030f4457f1f2adb8138ec856124e9a52c5e07"
+                "reference": "698137085ce9609bd425aa62a6f1fb3bb8a99b9f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/danielsan80/php-backport/zipball/f02030f4457f1f2adb8138ec856124e9a52c5e07",
-                "reference": "f02030f4457f1f2adb8138ec856124e9a52c5e07",
+                "url": "https://api.github.com/repos/danielsan80/php-backport/zipball/698137085ce9609bd425aa62a6f1fb3bb8a99b9f",
+                "reference": "698137085ce9609bd425aa62a6f1fb3bb8a99b9f",
                 "shasum": ""
             },
             "require": {
@@ -45,7 +45,7 @@
                 "MIT"
             ],
             "description": "A simple php backport module",
-            "time": "2019-03-07T11:26:36+00:00"
+            "time": "2019-03-18T17:27:25+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -221,7 +221,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.1"
+        "php": ">=7.0"
     },
     "platform-dev": []
 }
