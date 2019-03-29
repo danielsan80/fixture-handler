@@ -1,11 +1,5 @@
 version: '3'
 
 services:
-#  nginx:
-#    restart: always
   php:
     restart: always
-#  db:
-#    restart: always
-#  phpmyadmin:
-#    restart: always
