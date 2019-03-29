@@ -131,4 +131,9 @@ class FixtureHandler
     {
         $this->ensureFixturesAreLoaded();
     }
+    public function getRefKeys()
+    {
+        $this->ensureFixturesAreLoaded();
+        return array_keys($this->refs);
+    }
 }
